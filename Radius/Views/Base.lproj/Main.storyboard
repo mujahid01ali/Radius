@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Radiant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Radius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,13 +37,14 @@
                             <constraint firstItem="a4d-26-qjS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="qZt-3N-Cv3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="876-Zu-bop"/>
                     <connections>
                         <outlet property="collectionView" destination="a4d-26-qjS" id="wpN-bP-9Ho"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-108" y="4"/>
+            <point key="canvasLocation" x="817.55725190839689" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

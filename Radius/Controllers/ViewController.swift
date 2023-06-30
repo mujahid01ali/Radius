@@ -10,12 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let facilityViewModel = FacilityViewModel()
+    var facilityViewModel: FacilityViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(UINib(nibName: "FacilitySelectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FacilitySelectionCollectionViewCell")
+        facilityViewModel = FacilityViewModel()
+        collectionView.register(UINib(nibName: "FacilitySelectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FacilitySelectionCollectionView")
         collectionView.register(UINib(nibName: "CommonHeaderReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CommonHeaderReusableView")
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
         collectionView.collectionViewLayout = createLayout()
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -48,59 +50,6 @@ class ViewController: UIViewController {
     
     private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
         .init(layoutSize: .init(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-    }
-}
-
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return facilityViewModel.numberOfFacilities
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return facilityViewModel.numberOfFacilityOptions(at: section)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard facilityViewModel.numberOfFacilityOptions(at: indexPath.section) > indexPath.row else {
-            fatalError("Not found")
-        }
-        guard let option = facilityViewModel.getFacilityOption(index: indexPath.row, section: indexPath.section) else {
-            fatalError("Not found")
-        }
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FacilitySelectionCollectionViewCell", for: indexPath) as? FacilitySelectionCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        cell.cellConfig(option: option)
-        cell.closure = { [weak self] option in
-            guard let self = self else {
-                return
-            }
-            if self.facilityViewModel.isNotAllowedToSelect(faciltyId: self.facilityViewModel.getFacilityId(at: indexPath.section) ?? "", optionId: option?.id ?? "") {
-                return
-            }
-            
-            if let unwarppedOption = option {
-                self.facilityViewModel.updateOption(at: indexPath.section, at: indexPath.row, optionToUpdate: unwarppedOption)
-                DispatchQueue.main.async {
-                    collectionView.reloadItems(at: [indexPath])
-                }
-            }
-        }
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        switch kind {
-        case UICollectionView.elementKindSectionHeader:
-            guard self.facilityViewModel.numberOfFacilities > indexPath.section else { return UICollectionReusableView() }
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CommonHeaderReusableView", for: indexPath) as! CommonHeaderReusableView
-            let facility = self.facilityViewModel.getFacility(at: indexPath.section)
-            header.configure(title: facility?.name)
-            return header
-        default:
-            fatalError("fatal error")
-        }
     }
 }
 

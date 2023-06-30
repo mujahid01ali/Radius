@@ -9,7 +9,7 @@ import Foundation
 
 
 
-class FacilityViewModel {
+final class FacilityViewModel {
     private var facilityResponse: FacilityResponse?
 
     var numberOfFacilities: Int {
@@ -115,5 +115,4 @@ class FacilityViewModel {
             }
         }.resume()
     }
-    
 }
