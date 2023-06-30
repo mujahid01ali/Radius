@@ -1,6 +1,6 @@
 //
 //  ChipMultipleSelectionCollectionViewCell.swift
-//  Radiant
+//  Radius
 //
 //  Created by Mujahid Ali on 30/06/2023.
 //
@@ -9,6 +9,7 @@ import UIKit
 
 class FacilitySelectionCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var imgProperty: UIImageView!
     @IBOutlet weak var vwRounded: UIView!
     @IBOutlet weak var lblTitle: UILabel!
     
@@ -16,7 +17,6 @@ class FacilitySelectionCollectionViewCell: UICollectionViewCell {
     private var option: Options?
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUI()
     }
     
     func cellConfig(option: Options?) {
@@ -24,6 +24,8 @@ class FacilitySelectionCollectionViewCell: UICollectionViewCell {
         self.option = option
         setUI()
         lblTitle.text = option.name
+        imgProperty.image = UIImage(named: option.icon ?? "")
+        
     }
     
     private func setUI() {

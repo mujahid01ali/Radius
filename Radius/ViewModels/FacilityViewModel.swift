@@ -1,6 +1,6 @@
 //
 //  FacilityViewModel.swift
-//  Radiant
+//  Radius
 //
 //  Created by Mujahid Ali on 30/06/2023.
 //

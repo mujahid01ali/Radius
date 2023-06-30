@@ -52,7 +52,7 @@
 		00C9E44C2A4E263600019C08 = {
 			isa = PBXGroup;
 			children = (
-				00C9E4572A4E263600019C08 /* Radiant */,
+				00C9E4572A4E263600019C08 /* Radius */,
 				00C9E4562A4E263600019C08 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +65,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00C9E4572A4E263600019C08 /* Radiant */ = {
+		00C9E4572A4E263600019C08 /* Radius */ = {
 			isa = PBXGroup;
 			children = (
 				00C9E4702A4E285900019C08 /* Models */,
@@ -75,7 +75,7 @@
 				00C9E46C2A4E283000019C08 /* Resource */,
 				00C9E4662A4E263700019C08 /* Info.plist */,
 			);
-			path = Radiant;
+			path = Radius;
 			sourceTree = "<group>";
 		};
 		00C9E46C2A4E283000019C08 /* Resource */ = {
@@ -160,7 +160,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 00C9E4502A4E263600019C08 /* Build configuration list for PBXProject "Radiant" */;
+			buildConfigurationList = 00C9E4502A4E263600019C08 /* Build configuration list for PBXProject "Radius" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -353,18 +353,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K84MJFVXFR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Radiant/Info.plist;
+				INFOPLIST_FILE = Radius/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mujahid.radiant.Radiant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mujahid.radiant.Radius;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -381,18 +381,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K84MJFVXFR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Radiant/Info.plist;
+				INFOPLIST_FILE = Radius/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mujahid.radiant.Radiant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mujahid.radiant.Radius;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -403,7 +403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00C9E4502A4E263600019C08 /* Build configuration list for PBXProject "Radiant" */ = {
+		00C9E4502A4E263600019C08 /* Build configuration list for PBXProject "Radius" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00C9E4672A4E263700019C08 /* Debug */,
